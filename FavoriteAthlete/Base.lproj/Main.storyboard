@@ -42,7 +42,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Jdx-qb-Jda" kind="show" identifier="EditAthlete" destinationCreationSelector="editAthlete:" id="lBM-ky-b8A"/>
+                                    <segue destination="Jdx-qb-Jda" kind="show" identifier="EditAthlete" destinationCreationSelector="editAthlete:sender:" id="lBM-ky-b8A"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -54,7 +54,7 @@
                     <navigationItem key="navigationItem" title="My Favorite Athletes" id="HkE-HG-Ylf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sEp-s4-2KD">
                             <connections>
-                                <segue destination="Jdx-qb-Jda" kind="show" identifier="AddAthlete" destinationCreationSelector="addAthlete:" id="wJO-3P-Bh6"/>
+                                <segue destination="Jdx-qb-Jda" kind="show" identifier="AddAthlete" destinationCreationSelector="addAthlete:sender:" id="wJO-3P-Bh6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -149,19 +149,20 @@
                     <connections>
                         <outlet property="ageTextField" destination="5BH-RZ-lV3" id="LeY-nQ-dJf"/>
                         <outlet property="controversyTextField" destination="XGN-DD-4K6" id="AOk-j6-WCo"/>
-                        <outlet property="leagueTextField" destination="Qwm-lN-Kse" id="gYY-f1-HQF"/>
                         <outlet property="nameTextField" destination="9Ms-Uu-Heg" id="gh7-WI-z9R"/>
                         <outlet property="sportTextField" destination="Qwm-lN-Kse" id="ysU-vs-MbA"/>
                         <outlet property="teamTextField" destination="uqw-ia-7EH" id="gfT-8M-tqr"/>
+                        <segue destination="wud-hL-wbg" kind="unwind" identifier="saveButtonPressed" unwindAction="formUnwindSegue:" id="gJR-We-6xV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRJ-p2-DTp" sceneMemberID="firstResponder"/>
+                <exit id="wud-hL-wbg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1860" y="139"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lBM-ky-b8A"/>
+        <segue reference="wJO-3P-Bh6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

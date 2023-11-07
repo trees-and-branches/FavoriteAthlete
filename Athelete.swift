@@ -12,7 +12,7 @@ struct Athlete {
     let team: String?
     let sport: String
     let controversy: String?
-    var age: Int
+    var age: String
 
     var description: String {
         var descriptionString = "\(name) is a \(age)-year-old \(sport) athlete"
